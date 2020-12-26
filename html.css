@@ -1,0 +1,67 @@
+
+h2 {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 40px;
+  color: #585858;
+}
+
+.container {
+  flex: 1;
+  border: solid #a5a5a5 4px;
+  border-radius: 15px;
+  width: 500px;
+  height: 500px;
+  box-shadow: 10px 5px 5px #4e4e4e;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 10px;
+  overflow: scroll;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.listed {
+  font-family: "langar";
+}
+
+.centered {
+  text-align: center;
+}
+
+.title {
+  font-family: "Langar", cursive;
+  font-size: 80px;
+  color: #bd84df;
+  text-shadow: 3px 1px 1px #524063;
+}
+
+.pics {
+  width: 300px;
+}
+
+.about {
+  color: #a5a5a5;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.pointer {
+  cursor:pointer
+}
+
+.p {
+  padding: 7px;
+}
+
+.m {
+  margin: 7px;
+}
+
