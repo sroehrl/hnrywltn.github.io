@@ -1,92 +1,117 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <link rel="stylesheet" href="./html.css">
+    <link rel="stylesheet" href="./gaudiamus-adoption.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gaudiamus-css@1.2.0/css/gaudiamus.min.css">
+
     <title>
-      OH links!!
+        OH links!!
     </title>
-  </head>
-  <header>
+</head>
+<header>
     <div><!--links to different parts--></div>
     <h1 class="title centered">Here's Some Helpful Shit</h1>
-  </header>
+</header>
 
-  <body>
-    <div class="wrapper">
-    <div class="HTML container">
-      <h2>HTML</h2>
-      <p class="about italic p m"><a target="blank" href="https://en.wikipedia.org/wiki/HTML">About:</a> Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
-      <img class="pics"
-      src="lib/img/HTMLtemplate.png"
-      alt="basic HTML template"
-      >
-      <ul>
-        <li class="listed"><a target="blank" href="https://www.codecademy.com/learn/learn-html/modules/learn-html-elements/cheatsheet">CHEATSHEET</a>
-        </li>
-        <li class="listed"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">ELEMENTS</a>
-        </li>
-        <li class="listed"><a target="blank" href="https://html.com/resources/free-html-templates/">FREE TEMPLATES</a>
-        </li>
-      </ul>
-      <iframe width="400" height="210" src="https://www.youtube.com/embed/NzzGt7EmXVw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+<body>
+<div class="grid-12 md:grid-6-6" x-data="app()">
+    <template x-for="topic in data.topics">
+        <div class="w-75p m-x-auto container m-b-4">
+            <h2 x-text="topic.headline">HTML</h2>
+            <div class="content p-5">
+                <div class="about italic"><a target="blank" :href="topic.about.link">About:</a>
+                <p x-html="topic.about.text"></p>
+                </div>
+                <img class="pics"
+                     :src="topic.about.image"
+                     alt="topic image"
+                >
+                <ul>
+                    <template x-for="link in topic.links">
+                        <li class="listed"><a target="blank" :href="link.url" x-text="link.title"></a></li>
+                    </template>
+                </ul>
+                <iframe width="400" height="210" :src="topic.youtube" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
 
+            </div>
+        </div>
+    </template>
+
+<!--
     <div class="CSS container">
-      <h2>CSS</h2>
-      <p class="about italic p m"><a target="blank" href="https://en.wikipedia.org/wiki/CSS">About:</a> Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
-      <img class="pics"
-          src="lib/img/color_theory.png"
-          alt="theoretical meanings for different color palletes in websites"
-      >
-      <ul>
-        <li class="listed"><a target="blank" href="https://fonts.google.com">GOOGLE FONTS</a>
-        </li>
-        <li class="listed"><a target="blank" href="https://thispersondoesnotexist.com/">AI GENERATED FACES</a>
-        </li>
-        <li class="listed"><a target="blank" href="https://www.codecademy.com/learn/learn-css/modules/learn-css-selectors-visual-rules/cheatsheet">CHEATSHEET</a>
-        </li>
-        <li class="listed"><a target="blank" href="https://www.quackit.com/css/css_color_codes.cfm">COLOR PICKER</a>
-        </li>
-        <li class="listed"><a target="blank" href="https://material.io/resources/icons/?style=baseline">ICON FONT LIBRARY</a>
-        </li>
-        <li class="listed"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">INLINE vs. BLOCK</a>
-        </li>
-      </ul>
-        <iframe width="400" height="210" src="https://www.youtube.com/embed/1PnVor36_40" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h2>CSS</h2>
+        <p class="about italic p m"><a target="blank" href="https://en.wikipedia.org/wiki/CSS">About:</a> Cascading
+            Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a
+            markup language such as HTML.[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and
+            JavaScript.</p>
+        <img class="pics"
+             src="lib/img/color_theory.png"
+             alt="theoretical meanings for different color palletes in websites"
+        >
+        <ul>
+            <li class="listed"><a target="blank" href="https://fonts.google.com">GOOGLE FONTS</a>
+            </li>
+            <li class="listed"><a target="blank" href="https://thispersondoesnotexist.com/">AI GENERATED FACES</a>
+            </li>
+            <li class="listed"><a target="blank"
+                                  href="https://www.codecademy.com/learn/learn-css/modules/learn-css-selectors-visual-rules/cheatsheet">CHEATSHEET</a>
+            </li>
+            <li class="listed"><a target="blank" href="https://www.quackit.com/css/css_color_codes.cfm">COLOR PICKER</a>
+            </li>
+            <li class="listed"><a target="blank" href="https://material.io/resources/icons/?style=baseline">ICON FONT
+                LIBRARY</a>
+            </li>
+            <li class="listed"><a target="blank"
+                                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">INLINE vs.
+                BLOCK</a>
+            </li>
+        </ul>
+        <iframe width="400" height="210" src="https://www.youtube.com/embed/1PnVor36_40" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
     </div>
 
     <div class="JavaScript container">
-      <h2>JavaScript</h2>
-      <p class="about italic p m"><a target="blank" href="https://en.wikipedia.org/wiki/JavaScript">About:</a> JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.[7] JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.</p>
-      <ul>
-        <li class="listed"><a target="blank" href=""></a>
-        </li>
-        <li class="listed"><a target="blank" href=""></a>
-        </li>
-        <li class="listed"><a target="blank" href=""></a>
-        </li>
-      </ul>
-      <iframe width="400" height="210" src="https://www.youtube.com/embed/Sh6lK57Cuk4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h2>JavaScript</h2>
+        <p class="about italic p m"><a target="blank" href="https://en.wikipedia.org/wiki/JavaScript">About:</a>
+            JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript
+            specification.[7] JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has
+            curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.</p>
+        <ul>
+            <li class="listed"><a target="blank" href=""></a>
+            </li>
+            <li class="listed"><a target="blank" href=""></a>
+            </li>
+            <li class="listed"><a target="blank" href=""></a>
+            </li>
+        </ul>
+        <iframe width="400" height="210" src="https://www.youtube.com/embed/Sh6lK57Cuk4" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
     </div>
     <div class="Git container">
-      <h2>Git</h2>
+        <h2>Git</h2>
     </div>
     <div class="Github container">
-      <h2>Github</h2>
+        <h2>Github</h2>
     </div>
     <div class="Misc container">
-      <h2>MISC</h2>
-    </div>
-    </div>
-  </body>
-  <footer>
+        <h2>MISC</h2>
+    </div>-->
+</div>
+</body>
+<footer>
     henry's first attempt
-  </footer>
+</footer>
+
+<script src="app.js"></script>
 
 </html>
-
 
 
 <!--

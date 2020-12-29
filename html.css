@@ -7,17 +7,13 @@ h2 {
 }
 
 .container {
-  flex: 1;
   border: solid #a5a5a5 4px;
   border-radius: 15px;
-  width: 500px;
-  height: 500px;
   box-shadow: 10px 5px 5px #4e4e4e;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 10px;
-  overflow: scroll;
+}
+.container .content{
+  overflow-y: auto;
+  height: 500px;
 }
 
 .wrapper {
