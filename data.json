@@ -3,56 +3,60 @@
     {
       "headline": "HTML",
       "about": {
-        "link": "https://en.wikipedia.org/wiki/HTML",
+        "link": "https:\/\/en.wikipedia.org\/wiki\/HTML",
         "text": "Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.",
-        "image": "./lib/img/HTMLtemplate.png"
+        "image": ".\/lib\/img\/HTMLtemplate.png"
       },
       "links": [
         {
           "title": "CHEATSHEET",
-          "url": "https://www.codecademy.com/learn/learn-html/modules/learn-html-elements/cheatsheet"
+          "url": "https:\/\/www.codecademy.com\/learn\/learn-html\/modules\/learn-html-elements\/cheatsheet"
         },
         {
           "title": "ELEMENTS",
-          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+          "url": "https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/HTML\/Element"
         },
         {
           "title": "FREE TEMPLATES",
-          "url": "https://html.com/resources/free-html-templates/"
+          "url": "https:\/\/html.com\/resources\/free-html-templates\/"
+        },
+        {
+          "title": "sdf",
+          "url": "g"
         }
       ],
-      "youtube": "https://www.youtube.com/embed/NzzGt7EmXVw"
+      "youtube": "https:\/\/www.youtube.com\/embed\/NzzGt7EmXVw"
     },
     {
       "headline": "CSS",
       "about": {
-        "link": "https://en.wikipedia.org/wiki/CSS",
+        "link": "https:\/\/en.wikipedia.org\/wiki\/CSS",
         "text": "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.",
-        "image": "./lib/img/color_theory.png"
+        "image": ".\/lib\/img\/color_theory.png"
       },
       "links": [
         {
           "title": "GOOGLE FONTS",
-          "url": "https://fonts.google.com"
+          "url": "https:\/\/fonts.google.com"
         },
         {
           "title": "AI GENERATED FACES",
-          "url": "https://thispersondoesnotexist.com/"
+          "url": "https:\/\/thispersondoesnotexist.com\/"
         },
         {
           "title": "CHEATSHEET",
-          "url": "https://www.codecademy.com/learn/learn-css/modules/learn-css-selectors-visual-rules/cheatsheet"
+          "url": "https:\/\/www.codecademy.com\/learn\/learn-css\/modules\/learn-css-selectors-visual-rules\/cheatsheet"
         },
         {
           "title": "COLOR PICKER",
-          "url": "https://www.quackit.com/css/css_color_codes.cfm"
+          "url": "https:\/\/www.quackit.com\/css\/css_color_codes.cfm"
         },
         {
           "title": "ICON FONT LIBRARY",
-          "url": "https://material.io/resources/icons/?style=baseline"
+          "url": "https:\/\/material.io\/resources\/icons\/?style=baseline"
         }
       ],
-      "youtube": "https://www.youtube.com/embed/1PnVor36_40"
+      "youtube": "https:\/\/www.youtube.com\/embed\/1PnVor36_40"
     }
   ]
 }

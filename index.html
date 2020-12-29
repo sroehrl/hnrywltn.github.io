@@ -17,8 +17,8 @@
 </header>
 
 <body>
-<div class="grid-12 md:grid-6-6" x-data="app()">
-    <template x-for="topic in data.topics">
+<div class="grid-12 md:grid-6-6" x-data="app()" x-init="init()">
+    <template x-for="(topic,i) in data.topics">
         <div class="w-75p m-x-auto container m-b-4">
             <h2 x-text="topic.headline">HTML</h2>
             <div class="content p-5">
@@ -33,6 +33,12 @@
                     <template x-for="link in topic.links">
                         <li class="listed"><a target="blank" :href="link.url" x-text="link.title"></a></li>
                     </template>
+                    <form @submit.prevent="addLink" x-show="editing" class="grid-6-6">
+                        <input type="hidden" name="topic" :value="i">
+                        <input required class="b-primary b-0 b-b-1 b-rounded m-b-2 p-2" type="text" name="title" placeholder="title">
+                        <input required class="b-primary b-0 b-b-1 b-rounded m-b-2 p-2" type="text" name="url" placeholder="url">
+                        <button type="submit" class="b-rounded b-primary text-primary bg-transparent">add</button>
+                    </form>
                 </ul>
                 <iframe width="400" height="210" :src="topic.youtube" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
